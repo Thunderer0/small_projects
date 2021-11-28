@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>url shortner</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>url shrinker</h1>
+    <form action="/shorturl" method="POST">
+        <input required placeholder="url" type="Url" name="fullurl" id="fullurl">
+        <button type="submit" class="button">Shrink</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>FULL URL</th>
+                <th>SHORT URL</th>
+                <th>CLICK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% shorturls.forEach(shorturl => { %>
+                <tr>
+                    <td><a href="<%= shorturl.long %> "><%= shorturl.long %></a></td>
+                    <td><a href="<%= shorturl.long%>"><%= shorturl.short%></a></td>
+                    <td>10</td>
+                </tr> 
+           <% }); %> 
+            
+        </tbody>
+    </table>
+</body>
+</html>

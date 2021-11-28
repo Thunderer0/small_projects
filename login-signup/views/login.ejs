@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body class="login-page">
+    <div class="login-box">
+        <div class="btn-box">
+            <div class="login-btn"></div>
+            <button onclick="location.href='http://localhost:8080/login'" class="button">Login</button>
+            <button onclick="location.href='http://localhost:8080/signup'" class="button">Signup</button>
+        </div>  
+            
+            <form method="post" action="/login" class="login-form">
+
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="pwd" name="pwd" placeholder="Password">
+                <button class="login button" >Submit</button>
+            </form>
+            <button class="google-login" >Login with Google  <img src="google.png" height="20px" width="20px" alt=""></button>
+    </div>
+</body>
+
+</html>
